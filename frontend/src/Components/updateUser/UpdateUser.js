@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router';
 import './UpdateUser.css'
+import Nav from '../Nav/Nav';
 
 function UpdateUser() {
   const [inputs, setInputs] = useState({
@@ -69,6 +70,8 @@ function UpdateUser() {
   };
 
   return (
+    <div>
+      <Nav/>
     <div>
       <h1>Update User</h1>
       <form onSubmit={handleSubmit} className="add-user-form">
@@ -148,6 +151,7 @@ function UpdateUser() {
 
         <button type="submit">Submit</button>
       </form>
+    </div>
     </div>
   );
 }

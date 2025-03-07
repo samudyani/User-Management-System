@@ -6,14 +6,15 @@ import Nav from './Components/Nav/Nav'; // Import the Nav component
 import UserDetails from './Components/User Details/Users';
 import AddUser from './Components/AddUsers/AddUser';
 import UpdateUser from './Components/updateUser/UpdateUser';
+import Login from './Components/Login/Login';
 
 function App() {
   return (
     <div>
-      <Nav /> {/* Include the navigation */}
+
       <Routes>
         {/* Define the routes */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/mainhome" element={<Home />} />
         <Route path="/adduser" element={<AddUser />} />
         <Route path="/userdetails" element={<UserDetails />} />

@@ -1,8 +1,14 @@
 import React from 'react';
 import './Home.css'; 
+import Nav from '../Nav/Nav';
+
+
 function Home() {
+  
   return (
-    <div className="home-container">
+    <div>
+      <Nav/>
+        <div className="home-container">
       <h1 >Welcome to the Tuition Class Management System</h1>
       <br></br>
       <br></br>
@@ -31,7 +37,8 @@ function Home() {
         </div>
       </div>
     </div>
-  );
+    </div>
+      );
 }
 
 export default Home;

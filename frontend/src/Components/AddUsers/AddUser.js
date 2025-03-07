@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import './AddUser.css';  // Import the updated CSS file
+import Nav from '../Nav/Nav';
+
+
+
 
 function AddUser() {
   const navigate = useNavigate();
@@ -50,7 +54,10 @@ function AddUser() {
   };
 
   return (
-    <div className="add-user-container">
+    <div>
+      <Nav/>
+
+          <div className="add-user-container">
       <h1 className="page-heading">Add User</h1>
       <form onSubmit={handleSubmit} className="add-user-form">
         <div className="inline-fields">
@@ -137,6 +144,9 @@ function AddUser() {
         <button type="submit">Submit</button>
       </form>
     </div>
+
+    </div>
+
   );
 }
 

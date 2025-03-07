@@ -4,6 +4,7 @@ import User from "../User/User";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import './userdetails.css';  // Import the CSS file
+import Nav from "../Nav/Nav";
 
 const URL = "http://localhost:5000/users"; // Adjust this if needed
 
@@ -52,6 +53,8 @@ function Users() {
   };
 
   return (
+<div>
+  <Nav/>
     <div className="container">
       <h1 className="display">User Details Display Page</h1>
       <input
@@ -84,6 +87,8 @@ function Users() {
         Download PDF
       </button>
     </div>
+    </div>
+
   );
 }
 

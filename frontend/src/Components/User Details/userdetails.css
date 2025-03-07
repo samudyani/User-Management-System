@@ -1,0 +1,109 @@
+/* Body and Background */
+body {
+  background-image: url('https://t3.ftcdn.net/jpg/04/49/24/62/360_F_449246206_d8zZin2xak5IjmqMXviQmS66puENGA2u.jpg');
+
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.display{
+  
+  font-size: 40px;
+  font-weight: bold;
+  color: #151111;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Search Input */
+input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  backdrop-filter: blur(5px); /* Optional blur */
+}
+
+/* Button */
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.8s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* User List Section */
+.user-list {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0); /* Remove white background */
+  border-radius: 10px;
+  box-shadow: 0 08px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 80%;
+}
+
+/* Individual User Item */
+.user-item {
+  border: 0px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0); /* Remove white background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.user-item:last-child {
+  margin-bottom: 0;
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #030303;
+  font-weight: 600;
+}
+
+/* Download PDF Button */
+.download-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 20px 40px;
+  font-size: 26px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  border: none;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,44 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the navigation bar */
+  .home-ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the items */
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(235, 210, 210, 0.5)), 
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvZ64EmRQanh5TwZt4IbQW706F4x0OZNfOQ&s);
+    padding: 30px 0; /* Add space around the list */
+    width: 100%; /* Ensure it spans the full width */
+
+  }
+  
+  /* Style for each navigation item */
+  .home-li {
+    margin: 10px 90px; /* Space between items */
+    padding: 1px;
+    color: rgb(180, 88, 88); /* Text color */
+    text-align: center; /* Center the text */
+  }
+  
+  /* Style for the headings inside each list item */
+  .home-li h1 {
+    font-size: 50px; /* Font size for headings */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    
+  }
+  
+  /* Links inside the list items */
+  .home-li a {
+    text-decoration: none; 
+    color: rgb(95, 88, 88); 
+  }
+  
+  
+  

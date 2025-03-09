@@ -1,5 +1,5 @@
 /* Page Background */
-.update-user-container {
+.user-details {
     background: url('https://c4.wallpaperflare.com/wallpaper/963/87/601/light-blue-background-hd-wallpaper-wallpaper-thumb.jpg');
     background-size: cover;
     min-height: 30vh;
@@ -11,69 +11,60 @@
 }
 
 /* Centered Title */
-.update-user-container h1 {
-    color: #333;
+.user-title {
+    color: rgb(48, 32, 32);
     text-align: center;
     font-size: 28px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
-/* Form Styling */
-form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+/* User List */
+.user-list {
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
+}
+
+/* Search Box Wrapper (Keeps input & button in one line) */
+.search-container {
     display: flex;
-    flex-direction: column;
-}
-
-/* Labels */
-label {
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-/* Input Fields */
-input, select {
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 20px;
     width: 100%;
+    max-width: 400px;
+}
+
+/* Search Input */
+.search-container input {
+    flex: 1;
     padding: 10px;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px 0 0 8px;
     font-size: 16px;
-    margin-bottom: 15px;
     outline: none;
     transition: border-color 0.3s ease-in-out;
 }
 
-input:focus, select:focus {
+.search-container input:focus {
     border-color: #007bff;
 }
 
-/* Submit Button */
-button {
-    padding: 12px;
-    font-size: 18px;
+/* Search Button */
+.search-container button {
+    padding: 10px 15px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     background: #007bff;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid #007bff;
+    border-left: none; /* Connects to input field */
+    border-radius: 0 8px 8px 0;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-button:hover {
+.search-container button:hover {
     background: #0056b3;
     transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    form {
-        width: 90%;
-    }
 }

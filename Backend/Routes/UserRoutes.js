@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// Import User Controller (fix the file name)
+// Import User Controller 
 const UserController = require("../Controllers/UserControllers"); 
 
 // Define Routes

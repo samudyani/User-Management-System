@@ -1,38 +1,57 @@
-import React from 'react'
-import './nav.css';
-import {Link} from "react-router-dom"
+import React from 'react';
+import './Nav.css';
+import { Link, useNavigate } from 'react-router-dom';
 
-function Nav() {
+function Nav({ isAdmin, setIsAdmin }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAdmin");
+    setIsAdmin(false);
+    navigate("/");
+  };
+
   return (
-    <div>
-      <ul className='home-ul'>
-        <li className='home-li'>
-
-   
-            <Link to = "/mainhome "className="active-home-a">
-            <h1>Home</h1>
-            </Link>
+    <div className="nav">
+      <div className="nav-logo">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgxZXvrVzJ3s3hc-XGzM9-_jhj98CdhUcM4w&s"  
+          className="logo" 
+        />
+        <h1 className="title"> NO.ZERO EDUCATION CENTER  </h1>
+      </div>
+      <ul className="nav-list">
+        
+        
+        {/* Show these only if user is logged in as Admin */}
+        {isAdmin && (
+          <>
+            <li className="nav-item">
+              <Link to="/addUser" className="nav-link">
+                <h1>Add User</h1>
+              </Link>
             </li>
-       <li className='home-li'>
-       <Link to = "/adduser "className="active-home-a">
+            <li className="nav-item">
+              <Link to="/userDetails" className="nav-link">
+                <h1>User Details</h1>
+              </Link>
+            </li>
+          </>
+        )}
 
-            <h1>Add User </h1>
-            </Link>
-       </li>
-       <li className='home-li'>
-        <Link to = "/userdetails "className="active-home-a">
-            <h1>User Details </h1>
-            
-            </Link>
-        </li>
-            <li className='home-li'>
-        <Link to = "/updateusers "className="active-home-a">
-            
-            </Link>
-       </li>
+        {/* Show "Login" if user is not logged in, else show "Logout" */}
+        {!isAdmin ? (
+          <></>
+        ) : (
+          <li className="nav-item">
+            <button className="logout-button" onClick={handleLogout}>
+              Logout
+            </button>
+          </li>
+        )}
       </ul>
     </div>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

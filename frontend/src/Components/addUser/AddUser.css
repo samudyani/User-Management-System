@@ -1,5 +1,5 @@
 /* Page Background */
-.update-user-container {
+.add-user-container {
     background: url('https://c4.wallpaperflare.com/wallpaper/963/87/601/light-blue-background-hd-wallpaper-wallpaper-thumb.jpg');
     background-size: cover;
     min-height: 30vh;
@@ -11,7 +11,7 @@
 }
 
 /* Centered Title */
-.update-user-container h1 {
+.add-user-container h1 {
     color: #333;
     text-align: center;
     font-size: 28px;

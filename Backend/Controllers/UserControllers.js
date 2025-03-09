@@ -4,38 +4,47 @@ const router = express.Router();
 
 // DISPLAY ALL USERS
 const getAllUsers = async (req, res, next) => {
-    let users;
     try {
-        users = await User.find();
+        let users;
+        let name = req.query.name; // Ensure this is correctly extracting the query parameter
+        console.log(req.query.name);
+        if (name && name.trim() !== "") {
+            users = await User.find({ name: { $regex: name, $options: "i" } }).lean();
+        } else {
+            users = await User.find().lean();
+        }
+
+        if (!users.length) {
+            return res.status(404).json({ message: "No users found" });
+        }
+
+        return res.status(200).json({ users });
     } catch (err) {
-        console.log(err);
+        console.error(err);
         return res.status(500).json({ message: "Error fetching users" });
     }
-
-    if (!users || users.length === 0) {
-        return res.status(404).json({ message: "No users found" });
-    }
-
-    return res.status(200).json({ users });
 };
 
 // INSERT NEW USER
 const addUser = async (req, res, next) => {
-    const { name, studentID, age, email, phone, guardianName, guardianPhone, address,stream, gender, role } = req.body;
-
-    
+    const { name, age, email, phone, guardianName, guardianPhone, address, stream, gender, role } = req.body;
+    const generateStudentID = () => {
+        const year = new Date().getFullYear();
+        const randomNum = Math.floor(1000 + Math.random() * 9000);
+        return `EG/${year}/${randomNum}`;
+    };
 
     let user;
     try {
         user = new User({
             name,
-            studentID,
+            studentID: generateStudentID(),
             age,
             email,
             phone,
             guardianName,
             guardianPhone,
-            address, 
+            address,
             stream,
             gender,
             role

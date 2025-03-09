@@ -1,8 +1,12 @@
 import React from 'react';
 import './Home.css'; 
+
+
 function Home() {
+  
   return (
-    <div className="home-container">
+    <div>
+        <div className="home-container">
       <h1 >Welcome to the Tuition Class Management System</h1>
       <br></br>
       <br></br>
@@ -23,15 +27,10 @@ function Home() {
             View parents' contact information alongside student data. Stay connected with parents for updates or emergencies.
           </p>
         </div>
-        <div className="benefit-box">
-          <h3>Download User Reports</h3>
-          <p>
-            Download students within the system according to the preferences
-          </p>
-        </div>
       </div>
     </div>
-  );
+    </div>
+      );
 }
 
 export default Home;

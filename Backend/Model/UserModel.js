@@ -1,3 +1,4 @@
+//when we take inputs from a user (in a form there is name, age, gmail etc), here we create a model to user and from it we assign to others
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -67,15 +68,8 @@ const userSchema = new Schema({
 
     role: {
         type: String,
-        enum: ["Student", "Teacher", "Admin"],
         default: "Student"
-    },
-
-    isActive: {
-        type: Boolean,
-        default: true
     }
-
 }, { timestamps: true }); // Adds createdAt and updatedAt timestamps
 
-module.exports = mongoose.model("users", userSchema);
+module.exports = mongoose.model("Users", userSchema);
